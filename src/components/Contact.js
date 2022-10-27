@@ -24,18 +24,20 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:3000/contact", {
+    setButtonText("Sending...")
+    let response = await fetch("https://getform.io/f/b77b04c4-7716-4f88-93a6-a7cf342d6ba2", {
       method: "POST",
       headers: {
         "Content-Type": "Application/json;charset=utf-8",
       },
       body: JSON.stringify(formDetails),
     });
+    console.log(response);
     setButtonText("Send");
     let result = response.json();
     setFormDetails(formInitialDetails);
-    if (result.code === 200) {
+    console.log(result.code);
+    if (result.code != 404) {
       setStatus({ success: true, message: "Message sent successfully" });
     } else {
       setStatus({
@@ -52,8 +54,8 @@ export const Contact = () => {
             <img src={contactImg} alt="Contact Us" />
           </Col>
           <Col md={6}>
-            <h2>Get In Touch</h2>
-            <form action="https://getform.io/f/079f23aa-7332-43b9-904c-c8ffe41b26a4" method="POST" onSubmit={handleSubmit}>
+            <h2>Get In Touch With E-Mail</h2>
+            <form action="https://getform.io/f/b77b04c4-7716-4f88-93a6-a7cf342d6ba2" method="POST" onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className="px-1">
                   <input
