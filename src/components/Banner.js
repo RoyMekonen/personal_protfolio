@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/githubprofile-removebg.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
+import CV from "../assets/RMCV.pdf"
 import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
@@ -84,9 +85,9 @@ export const Banner = () => {
                     Strong team player.<br/>  Excellent at multitasking.<br/>  experience
                     working a global environment
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
+                 <a href={CV} style={{textDecoration: 'none'}}><button>
+                  Download CV file <ArrowRightCircle size={25} />
+                  </button> </a>
                 </div>
               )}
             </TrackVisibility>
