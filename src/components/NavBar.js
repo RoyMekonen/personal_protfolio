@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/profile-logo.png';
 import linkedinIcon from '../assets/img/nav-icon1.svg';
 import githubIcon from '../assets/img/githubwhite.png';
 import { HashLink } from 'react-router-hash-link';
@@ -35,9 +34,6 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
-            <img className="logo-img" src={logo}  alt="Logo" />
-          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
