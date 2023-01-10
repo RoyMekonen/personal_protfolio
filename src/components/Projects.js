@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import moviesProj from "../assets/img/moviesProj.webp";
 import gymProj from "../assets/img/gymProj.webp";
-import cryptoProj from "../assets/img/cryptoProj.jpeg";
+import multiMarket from "../assets/img/multi-market.jpeg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -11,21 +11,21 @@ export const Projects = () => {
   const projects = [
     {
       title: "Movies App",
-      description: "Design & Development",
+      description: "React.JS & Tailwind-css",
       imgUrl: moviesProj,
-      githubLink: "https://github.com/RoyMekonen/TROYA-PROJECT",
+      githubLink: "https://github.com/RoyMekonen/ProjectMovies_react_redux",
     },
     {
       title: "GYM App",
-      description: "Design & Development",
+      description: "JS Vanilla & Bootstrap",
       imgUrl: gymProj,
       githubLink: "https://github.com/RoyMekonen/TROYA-PROJECT",
     },
     {
-      title: "Crypto App",
-      description: "Design & Development",
-      imgUrl: cryptoProj,
-      githubLink: "https://github.com/RoyMekonen/TROYA-PROJECT",
+      title: "Atlas App",
+      description: "MERN & Tailwind-css",
+      imgUrl: multiMarket,
+      githubLink: "https://github.com/MalakoN17/MultiMarket-team-project",
     },
   ];
 
